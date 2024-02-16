@@ -1,0 +1,90 @@
+.confirm {
+    z-index: 20;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: $popup-bg-light;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__popup {
+        background-color: $secondary-background;
+        border: 2px solid #333333;
+        border-radius: .8rem;
+        display: flex;
+        flex-direction: column;
+
+        &-heading {
+            padding: 3rem;
+            border-bottom: 2px solid #333333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+
+            svg {
+                height: 4rem;
+                width: 4rem;
+            }
+
+            &__details {
+                display: flex;
+                flex-direction: column;
+
+                &-title {
+                    text-transform: uppercase;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                    color: $primary-text;
+                }
+
+                &-description {
+                    font-weight: 500;
+                    font-size: 1.4rem;
+                    color: $secondary-text;
+                }
+            }
+        }
+
+        &-buttons {
+            padding: 3rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            &__cancel,
+            &__confirm {
+                flex: 1;
+                font-family: $primary-font;
+                font-weight: 700;
+                font-size: 1.6rem;
+                padding: 1rem;
+                color: $primary-text;
+                border: none;
+                border-radius: .8rem;
+                transition: all .2s;
+                cursor: pointer;
+            }
+
+            &__cancel {
+                background-color: $error-text;
+
+                &:hover {
+                    background-color: $error-text-dark;
+                }
+            }
+
+            &__confirm {
+                background-color: $secondary-background;
+                border: 2px solid #333333;
+
+                &:hover {
+                    background-color: $primary-background;
+                }
+            }
+        }
+    }
+}

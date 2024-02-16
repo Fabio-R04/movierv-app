@@ -1,0 +1,90 @@
+// Background Color
+$primary-background: #191717; // Medium
+$secondary-background: rgb(21, 17, 17); // Dark
+$tertiary-background: rgb(33, 32, 32); // Medium light
+$quaternary-background: #272727; // Light
+
+// Text Color
+$primary-text: #fff; // Light
+$secondary-text: #cfd3e0; // Semi light
+$tertiary-text: #9999a5; // Darkest
+$link-text: rgb(119, 167, 255);
+$link-text-dark: rgb(24, 119, 242);
+$error-text: #e50914;
+$error-text-dark: #b60811;
+
+// Button
+$primary-button: rgb(0, 149, 246);
+$primary-button-hover: rgb(24, 119, 242);
+$secondary-button: rgb(239, 239, 239);
+$secondary-button-hover: rgb(219, 219, 219);
+
+// Hover 
+$hover-overlay: rgba(0, 0, 0, .05);
+
+// Popup Background
+$popup-bg: rgba(0, 0, 0, .65);
+$popup-bg-light: rgba(0, 0, 0, .3);
+
+// Border
+$border-main: rgb(219, 219, 219);
+$border-light: rgb(235, 235, 235);
+
+// Font Family
+$primary-font: 'Montserrat', sans-serif;
+$secondary-font: 'Martel Sans', sans-serif;
+
+// Responsive Breakpoints 
+$bp-extra-large: 87.5em; // 1400px
+$bp-largest: 75em; // 1200px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 50em; // 800px
+$bp-small: 37.5em; // 600px
+$bp-extra-small: 25em; // 450px
+
+:root {
+    color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $primary-font;
+    font-weight: 400;
+    color: $primary-text;
+    background-color: $primary-background;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span {
+    margin: 0;
+}
+
+// Reuseable
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}

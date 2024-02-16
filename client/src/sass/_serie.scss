@@ -1,0 +1,128 @@
+.serie-details__seasons {
+    display: grid;
+    grid-template-columns: 3fr 5fr 5fr;
+    gap: 2rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 2fr 5fr;
+    }
+
+    @media only screen and (max-width: 28.125em) {
+        grid-template-columns: 1fr;
+    }
+
+    &-details {
+        h1:nth-child(1) {
+            font-weight: 600;
+            font-size: 2.3rem;
+            margin-bottom: 2rem;
+        }
+
+        &__container {
+            display: flex;
+            align-items: center;
+            background-color: $tertiary-background;
+            color: rgba($color: white, $alpha: .7);
+            font-weight: 500;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover {
+                color: $primary-text;
+            }
+
+            p:nth-child(1) {
+                max-width: 3.9rem;
+                width: 100%;
+                padding: 1.2rem 1.7rem;
+            }
+        }
+    }
+
+    &-active {
+        background-color: $error-text !important;
+        color: $primary-text !important;
+
+        &:hover {
+            color: $primary-text !important;
+        }
+    }
+
+    &-seasons {
+        display: flex;
+        flex-direction: column;
+
+        &__season {
+            padding: 1.2rem 1.7rem;
+            background-color: $tertiary-background;
+            color: rgba($color: white, $alpha: .7);
+            font-weight: 500;
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover {
+                color: $primary-text;
+            }
+        }
+    }
+
+    &-episodes {
+        display: flex;
+        flex-direction: column;
+
+        &__all {
+            max-height: 33rem;
+            height: 100%;
+            overflow: auto;
+        }
+
+        &__episode {
+            padding: 1.2rem 1.7rem;
+        }
+    }
+
+    &-episode__details {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (max-width: $bp-medium) {
+            grid-column: 1 / -1;
+        }
+
+        &-img {
+            position: relative;
+            max-width: 62.6.34rem;
+            max-height: 35.2.52rem;
+            height: 100%;
+            width: 100%;
+
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            p:nth-child(2) {
+                position: absolute;
+                left: 1rem;
+                bottom: 1rem;
+                font-weight: 700;
+                font-size: 1.4rem;
+                color: $primary-text;
+            }
+        }
+
+        p:nth-child(3) {
+            margin-top: 2rem;
+            color: rgba($color: white, $alpha: .7);
+            font-family: $secondary-font;
+            font-weight: 700;
+            font-size: 1.4rem;
+        }
+    }
+}

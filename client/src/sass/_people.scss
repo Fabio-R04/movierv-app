@@ -1,0 +1,46 @@
+.people {
+    padding: 3rem;
+
+    &__all {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(18.5rem, 1fr));
+        gap: 2rem;
+
+        &-person {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            border-radius: .5rem;
+            overflow: hidden;
+
+            &__img {
+                display: block;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                background-color: $tertiary-background;
+            }
+
+            &__details {
+                background-color: $tertiary-background;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: .5rem;
+                padding: 2rem 0;
+
+                &-name {
+                    font-size: 1.6rem;
+                    font-weight: 700;
+                    color: $primary-text;
+                }
+
+                &-department {
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    color: $secondary-text;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.my-reviews {
+    padding: 3rem;
+
+    &__all {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(18.5rem, 1fr));
+        gap: 2rem;
+    }
+}
